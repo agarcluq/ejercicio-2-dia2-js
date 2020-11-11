@@ -10,16 +10,20 @@ function getUsers() {
     .then(response => response.json())
 
     .then(data => {
+      console.log("Lista completa del array original")
+      console.log(data)
       console.log("Lista de nombres del array original")
       data.forEach(function(elemento, indice, data) {
         console.log(elemento.name);
       });
 
-      console.log("usuarios que tengán más de 500 array nuevo")
+      console.log("Usuarios que tengán más de 500 array nuevo")
       let arrayFilter = data.filter(elemento => elemento.money > 500);
       arrayFilter.forEach(function(elemento, indice, data) {
         console.log(elemento.name);
       });
+      console.log("Lista completa del array filtrado")
+      console.log(arrayFilter)
     });
 }
 
